@@ -1,8 +1,9 @@
 using System;
 
+
 namespace ProyectoUT5
 {
-    public class Register : IRegistrationService
+    public class Register : IRegistration
     {
 
         public Register()
@@ -10,8 +11,9 @@ namespace ProyectoUT5
             //singleton de userRepository
         }
 
-        public bool Register(string username, string password, string email)
+        public bool RegisterUser(string username, string password, string email)
         {
+            /*
             if (userRepository.GetUserByUsername(username) != null)
             {
                 // El usuario ya existe
@@ -27,7 +29,10 @@ namespace ProyectoUT5
             };
 
             _userRepository.AddUser(user);
+        */
+
             return true;
+
         }
     }
 }

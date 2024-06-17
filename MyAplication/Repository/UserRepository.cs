@@ -3,10 +3,11 @@ using System.Linq;
 
 namespace ProyectoUT5
 {
-    public class UserRepository : IUserRepository
+    public class UserRepository 
     {
-        private readonly List<User> _users = new List<User>();
+        //private readonly List<User> _users = new List<User>();
 
+/*
         public void AddUser(User user)
         {
             _users.Add(user);
@@ -16,5 +17,7 @@ namespace ProyectoUT5
         {
             return _users.FirstOrDefault(u => u.Username == username);
         }
+    */
+
     }
 }

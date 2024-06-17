@@ -2,7 +2,7 @@ using System;
 
 namespace ProyectoUT5
 {
-    public class juez : Person
+    public class Juez : Person
     {
         public int Experience { get; set; }
         public string Discipline { get; set; }
@@ -11,11 +11,12 @@ namespace ProyectoUT5
             : base(ci, firstName, lastName, age, genre, country, email)
         {
             Experience = experience;
-            Discipline + discipline;
+            Discipline = discipline;
         }
 
-        public void insertPoints(int participantCi, int points){
-            //logica ingresar puntos del participante 
+        public void insertPoints(int participantCi, int points)
+        {
+            // Logica para ingresar puntos del participante 
         }
     }
 }

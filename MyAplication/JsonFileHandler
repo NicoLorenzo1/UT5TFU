@@ -6,14 +6,14 @@ namespace ProyectoUT5
 {
     public static class JsonFileHandler
     {
-        public static void WriteToJsonFile<T>(string filePath, List<T> objectToWrite, bool append = false)
+        public static void WriteToJsonFile<T>(string Data/participants.json, List<T> objectToWrite, bool append = false)
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
             string jsonString = JsonSerializer.Serialize(objectToWrite, options);
             File.WriteAllText(filePath, jsonString);
         }
 
-        public static List<T> ReadFromJsonFile<T>(string filePath)
+        public static List<T> ReadFromJsonFile<T>(string Data/participants.json)
         {
             if (!File.Exists(filePath))
             {
