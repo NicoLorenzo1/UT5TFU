@@ -6,7 +6,9 @@ namespace ProyectoUT5
 {
     public static class JsonFileHandler
     {
-        public static void WriteToJsonFile<T>(string Data/participants.json, List<T> objectToWrite, bool append = false)
+        public JsonFileHandler{}
+        
+        public static void WriteToJsonFile<T>(string participants.json, List<T> objectToWrite, bool append = false)
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
             string jsonString = JsonSerializer.Serialize(objectToWrite, options);

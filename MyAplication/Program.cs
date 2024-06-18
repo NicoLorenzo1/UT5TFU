@@ -1,4 +1,5 @@
 ﻿using System;
+using ProyectoUT5.Repository;
 
 namespace ProyectoUT5
 {
@@ -8,6 +9,14 @@ namespace ProyectoUT5
         {
             Console.WriteLine("Hola, Mundo!");
 
+            UserRepository userRepository = new UserRepository();
+            getParticipants(userRepository);
+
+        }
+
+        public static void getParticipants(UserRepository userRepository){
+            var result = userRepository.GetUserByUsername("Nombre1");
+            Console.WriteLine(result);
         }
     }
 }

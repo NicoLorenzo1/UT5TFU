@@ -1,23 +1,32 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ProyectoUT5
+namespace ProyectoUT5.Repository
 {
     public class UserRepository 
     {
-        //private readonly List<User> _users = new List<User>();
+        private readonly List<Participant> participantsList = new List<Participant>();
 
-/*
-        public void AddUser(User user)
+         public UserRepository()
         {
-            _users.Add(user);
+            // Carga la lista desde el archivo JSON al inicializar UserRepository
+            LoadParticipantsList();
         }
 
-        public User GetUserByUsername(string username)
+        private void LoadParticipantsList()
         {
-            return _users.FirstOrDefault(u => u.Username == username);
+            participantsList.AddRange(JsonFileHandler.ReadFromJsonFile<Participant>("Data/participants.json"));
         }
-    */
 
+        public void AddParticipant(Participant participant)
+        {
+            participantsList.Add(participant);
+            JsonFileHandler.WriteToJsonFile("Data/participants.json", participantsList);
+        }
+
+        public Participant GetUserByUsername(string firstName)
+        {
+            return participantsList.FirstOrDefault(u => u.FirstName == firstName);
+        }
     }
 }
