@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
+using ProyectoUT5;
 
-namespace ProyectoUT5.Repository
+namespace ProyectoUT5
 {
     public class UserRepository 
     {
