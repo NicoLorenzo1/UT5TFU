@@ -4,11 +4,11 @@ using ProyectoUT5;
 
 namespace ProyectoUT5
 {
-    public class UserRepository 
+    public class UserRepository
     {
         private readonly List<Participant> participantsList = new List<Participant>();
 
-         public UserRepository()
+        public UserRepository()
         {
             // Carga la lista desde el archivo JSON al inicializar UserRepository
             LoadParticipantsList();
@@ -27,7 +27,13 @@ namespace ProyectoUT5
 
         public Participant GetUserByUsername(string firstName)
         {
-            return participantsList.FirstOrDefault(u => u.FirstName == firstName);
+            var participant = participantsList.FirstOrDefault(u => u.FirstName == firstName);
+            if (participant == null)
+            {
+                throw new KeyNotFoundException($"No participant found with first name {firstName}");
+            }
+            return participant;
         }
+
     }
 }

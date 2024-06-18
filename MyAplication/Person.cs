@@ -19,7 +19,7 @@ namespace ProyectoUT5
             LastName = lastName;
             Age = age;
             Genre = genre;
-            country = country;
+            Country = country;
             Email = email;
         }
     }

@@ -21,7 +21,7 @@ namespace ProyectoUT5
             }
 
             string jsonString = File.ReadAllText(filePath);
-            return JsonSerializer.Deserialize<List<T>>(jsonString);
+            return JsonSerializer.Deserialize<List<T>>(jsonString) ?? new List<T>();
         }
     }
 }
