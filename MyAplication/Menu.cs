@@ -95,18 +95,18 @@ namespace ProyectoUT5
             if (loginSuccess && isJudge)
             {
                 Console.WriteLine("¡Bienvenido Juez!");
-                JudgeInterface();
+               // JudgeInterface();
             }
             else if(loginSuccess){
                 Console.WriteLine("¡Bienvenido Participante!");
-                ParticipantInterface();
+               // ParticipantInterface();
             }
             else
             {
                 Console.WriteLine("Inicio de sesión fallido. Verifica tus datos.");
             }
 
-            
+
         }
         }
     }

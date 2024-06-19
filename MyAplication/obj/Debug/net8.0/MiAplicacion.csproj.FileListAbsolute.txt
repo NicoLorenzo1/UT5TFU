@@ -13,6 +13,27 @@
 /Users/nicolaslorenzo/Desktop/UT5TFU/MyAplication/obj/Debug/net8.0/MiAplicacion.pdb
 /Users/nicolaslorenzo/Desktop/UT5TFU/MyAplication/obj/Debug/net8.0/MiAplicacion.genruntimeconfig.cache
 /Users/nicolaslorenzo/Desktop/UT5TFU/MyAplication/obj/Debug/net8.0/ref/MiAplicacion.dll
+<<<<<<< HEAD
 /Users/nicolaslorenzo/Desktop/UT5TFU/MyAplication/obj/Debug/net8.0/MiAplicacion.csproj.AssemblyReference.cache
 /Users/nicolaslorenzo/Desktop/UT5TFU/MyAplication/bin/Debug/net8.0/Newtonsoft.Json.dll
 /Users/nicolaslorenzo/Desktop/UT5TFU/MyAplication/obj/Debug/net8.0/MiAplica.2C7F9D8B.Up2Date
+=======
+/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/bin/Debug/net8.0/MiAplicacion
+/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/bin/Debug/net8.0/MiAplicacion.deps.json
+/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/bin/Debug/net8.0/MiAplicacion.runtimeconfig.json
+/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/bin/Debug/net8.0/MiAplicacion.dll
+/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/bin/Debug/net8.0/MiAplicacion.pdb
+/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/obj/Debug/net8.0/MiAplicacion.GeneratedMSBuildEditorConfig.editorconfig
+/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/obj/Debug/net8.0/MiAplicacion.AssemblyInfoInputs.cache
+/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/obj/Debug/net8.0/MiAplicacion.AssemblyInfo.cs
+/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/obj/Debug/net8.0/MiAplicacion.csproj.CoreCompileInputs.cache
+/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/obj/Debug/net8.0/MiAplicacion.sourcelink.json
+/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/obj/Debug/net8.0/MiAplicacion.dll
+/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/obj/Debug/net8.0/refint/MiAplicacion.dll
+/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/obj/Debug/net8.0/MiAplicacion.pdb
+/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/obj/Debug/net8.0/MiAplicacion.genruntimeconfig.cache
+/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/obj/Debug/net8.0/ref/MiAplicacion.dll
+/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/bin/Debug/net8.0/Newtonsoft.Json.dll
+/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/obj/Debug/net8.0/MiAplicacion.csproj.AssemblyReference.cache
+/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/obj/Debug/net8.0/MiAplica.2C7F9D8B.Up2Date
+>>>>>>> e81e2d430bc47ae96227bb963acdd36a13345f17
