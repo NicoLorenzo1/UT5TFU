@@ -13,3 +13,6 @@
 /Users/nicolaslorenzo/Desktop/UT5TFU/MyAplication/obj/Debug/net8.0/MiAplicacion.pdb
 /Users/nicolaslorenzo/Desktop/UT5TFU/MyAplication/obj/Debug/net8.0/MiAplicacion.genruntimeconfig.cache
 /Users/nicolaslorenzo/Desktop/UT5TFU/MyAplication/obj/Debug/net8.0/ref/MiAplicacion.dll
+/Users/nicolaslorenzo/Desktop/UT5TFU/MyAplication/obj/Debug/net8.0/MiAplicacion.csproj.AssemblyReference.cache
+/Users/nicolaslorenzo/Desktop/UT5TFU/MyAplication/bin/Debug/net8.0/Newtonsoft.Json.dll
+/Users/nicolaslorenzo/Desktop/UT5TFU/MyAplication/obj/Debug/net8.0/MiAplica.2C7F9D8B.Up2Date

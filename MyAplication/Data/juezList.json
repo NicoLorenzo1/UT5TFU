@@ -1,0 +1,15 @@
+[
+    {
+      "Ci":123456789,
+      "FirstName": "Nombre1",
+      "LastName": "Apellido1",
+      "age": 30,
+      "genre": "Masculino",
+      "country": "Uruguay",
+      "email": "correo1@example.com",
+      "experience": 5,
+      "Password": "111",
+      "discipline": "Fútbol"
+    }
+]
+  
