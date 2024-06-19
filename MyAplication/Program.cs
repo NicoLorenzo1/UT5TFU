@@ -7,24 +7,8 @@ namespace ProyectoUT5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hola, Mundo!");
-
-            UserRepository userRepository = new UserRepository();
-            getParticipants(userRepository);
-
-        }
-
-        public static void getParticipants(UserRepository userRepository){
-            var result = userRepository.GetUserByUsername("Nombre1");
-
-            if (result != null)
-            {
-                Console.WriteLine("Usuario encontrado: " + result.FirstName + " " + result.LastName);
-            }
-            else
-            {
-                Console.WriteLine("Usuario no encontrado");
-            }
+            ShowDisciplies showDisciplies = new ShowDisciplies();
+            showDisciplies.showDisciplies();
         }
     }
 }
