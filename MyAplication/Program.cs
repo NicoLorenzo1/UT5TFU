@@ -1,4 +1,5 @@
 ﻿using System;
+using ProyectoUT5.Repository;
 
 namespace ProyectoUT5
 {
@@ -15,7 +16,15 @@ namespace ProyectoUT5
 
         public static void getParticipants(UserRepository userRepository){
             var result = userRepository.GetUserByUsername("Nombre1");
-            Console.WriteLine(result);
+
+            if (result != null)
+            {
+                Console.WriteLine("Usuario encontrado: " + result.FirstName + " " + result.LastName);
+            }
+            else
+            {
+                Console.WriteLine("Usuario no encontrado");
+            }
         }
     }
 }
