@@ -1,0 +1,198 @@
+{
+    "disciplinas": [
+      {
+        "id": 1,
+        "nombre": "Atletismo",
+        "descripcion": "Las competiciones de atletismo se puntúan en función del tiempo o la distancia recorrida por el atleta.",
+        "modalidades": [
+          {
+            "nombre": "Pista",
+            "categorias": [
+              {
+                "nombre": "Carreras de Velocidad",
+                "descripcion": "Se puntúan en función del tiempo que tarda el atleta en completar la distancia, siendo el primer lugar el que obtiene la mayor puntuación.",
+                "distancias": [100, 200, 400, 800, 1500, 5000, 10000]
+              },
+              {
+                "nombre": "Carreras de Vallas",
+                "descripcion": "Similar a las carreras de velocidad, pero con obstáculos que el atleta debe superar. Se puntúan en función del tiempo y la técnica para superar las vallas.",
+                "distancias": [110, 100]
+              },
+              {
+                "nombre": "Carreras de Relevos",
+                "descripcion": "Equipos de cuatro atletas compiten en carreras de 4 x 100 metros y 4 x 400 metros, pasando un testigo entre sí.",
+                "distancias": ["4x100", "4x400"]
+              },
+              {
+                "nombre": "Carreras de Marcha",
+                "descripcion": "Los atletas deben mantener un contacto constante con el suelo, lo que implica una técnica específica. Se puntúan en función del tiempo y la técnica de marcha.",
+                "distancias": [20, 50]
+              }
+            ]
+          },
+          {
+            "nombre": "Campo",
+            "categorias": [
+              {
+                "nombre": "Saltos",
+                "descripcion": "Los atletas saltan lo más alto o lo más lejos posible.",
+                "modalidades": ["salto de altura", "salto de longitud", "triple salto"]
+              },
+              {
+                "nombre": "Lanzamientos",
+                "descripcion": "Los atletas lanzan un implemento lo más lejos posible.",
+                "modalidades": ["lanzamiento de peso", "lanzamiento de disco", "lanzamiento de martillo", "lanzamiento de jabalina"]
+              }
+            ]
+          },
+          {
+            "nombre": "Combinadas",
+            "categorias": [
+              {
+                "nombre": "Heptatlón (femenino)",
+                "descripcion": "Combinan siete disciplinas diferentes de pista y campo en dos días de competencia. Se puntúan mediante un sistema de tablas de puntuación que asigna puntos a cada rendimiento en función de su dificultad."
+              },
+              {
+                "nombre": "Decatlón (masculino)",
+                "descripcion": "Combinan diez disciplinas diferentes de pista y campo en dos días de competencia. Se puntúan mediante un sistema de tablas de puntuación que asigna puntos a cada rendimiento en función de su dificultad."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "nombre": "Natación",
+        "descripcion": "Las competiciones de natación se puntúan en función del tiempo que tarda el nadador en completar la carrera.",
+        "modalidades": [
+          {
+            "nombre": "Natación Libre",
+            "descripcion": "Los nadadores emplean el estilo que prefieran para recorrer la distancia.",
+            "distancias": [50, 100, 200, 400, 800, 1500]
+          },
+          {
+            "nombre": "Espalda",
+            "descripcion": "Los nadadores flotan boca arriba, remando con los brazos y pateando hacia abajo.",
+            "distancias": [100, 200]
+          },
+          {
+            "nombre": "Braza",
+            "descripcion": "Un estilo que simula la braza de una rana, con movimientos simultáneos de brazos y piernas.",
+            "distancias": [100, 200]
+          },
+          {
+            "nombre": "Mariposa",
+            "descripcion": "Considerada la más exigente, requiere movimientos ondulantes de brazos y del cuerpo, acompañados de una patada de delfín.",
+            "distancias": [100, 200]
+          },
+          {
+            "nombre": "Relevos",
+            "descripcion": "Cuatro nadadores por equipo compiten en distancias de 4 x 100 metros (libre y estilos combinados).",
+            "distancias": ["4x100"]
+          },
+          {
+            "nombre": "Natación en Aguas Abiertas",
+            "descripcion": "Una aventura desafiante en escenarios naturales como mares, lagos o ríos.",
+            "distancias": [10000]
+          }
+        ],
+        "categorias": [
+          {
+            "nombre": "Género",
+            "opciones": ["masculino", "femenino"]
+          },
+          {
+            "nombre": "Edad",
+            "opciones": ["Juvenil", "Abierta"]
+          },
+          {
+            "nombre": "Especiales",
+            "opciones": ["Natación Paralímpica", "Natación de Maestros"]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "nombre": "Gimnasia",
+        "descripcion": "Las competiciones de gimnasia se puntúan en función de la dificultad y la ejecución de las rutinas de los gimnastas."
+      },
+      {
+        "id": 4,
+        "nombre": "Clavados",
+        "descripcion": "Las competiciones de clavados se puntúan en función de la dificultad y la ejecución de los saltos de los clavadistas."
+      },
+      {
+        "id": 5,
+        "nombre": "Halterofilia",
+        "descripcion": "Las competiciones de halterofilia se puntúan en función del peso total levantado por el levantador de pesas.",
+        "categorias": [
+          {
+            "nombre": "Masculino",
+            "opciones": ["56 kg", "62 kg", "69 kg", "73 kg", "81 kg", "89 kg", "96 kg", "102 kg", "109 kg", "+109 kg"]
+          },
+          {
+            "nombre": "Femenino",
+            "opciones": ["49 kg", "55 kg", "59 kg", "64 kg", "71 kg", "76 kg", "81 kg", "87 kg", "+87 kg"]
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "nombre": "Esgrima",
+        "descripcion": "En este deporte, los atletas se enfrentan en duelos uno contra uno, buscando tocar a su oponente sin ser tocados ellos mismos.",
+        "categorias": [
+          {
+            "nombre": "Espada",
+            "descripcion": "Un arma de punta y filo, la más larga y pesada de las tres."
+          },
+          {
+            "nombre": "Florete",
+            "descripcion": "Un arma de punta más ligera y flexible que la espada."
+          },
+          {
+            "nombre": "Sable",
+            "descripcion": "Un arma de corte y punta, la más rápida y ligera de las tres."
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "nombre": "Surf",
+        "descripcion": "El surf, deporte que cabalga las olas del mar, se incorporó oficialmente a los Juegos Olímpicos de Tokio 2020.",
+        "categorias": [
+          {
+            "nombre": "Shortboard",
+            "descripcion": "La categoría más popular, donde los surfistas utilizan tablas cortas y maniobrables para realizar trucos y giros radicales sobre las olas."
+          },
+          {
+            "nombre": "Longboard",
+            "descripcion": "Las tablas son más largas y pesadas, lo que permite un estilo de surf más fluido y elegante."
+          },
+          {
+            "nombre": "Sup (Stand Up Paddle)",
+            "descripcion": "Los surfistas se paran sobre una tabla más grande y utilizan un remo para impulsarse y realizar maniobras técnicas."
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "nombre": "Kitesurf",
+        "descripcion": "El kitesurf combina la fuerza del viento con la habilidad del surfista.",
+        "categorias": [
+          {
+            "nombre": "Kitesurf de velocidad",
+            "descripcion": "Una carrera contrarreloj donde los kitesurfistas buscan alcanzar la mayor velocidad posible."
+          },
+          {
+            "nombre": "Kitesurf Freestyle",
+            "descripcion": "Los atletas realizan trucos y maniobras acrobáticas en el aire con su cometa y tabla."
+          },
+          {
+            "nombre": "Kitesurf de olas",
+            "descripcion": "Similar al surf tradicional, pero utilizando la potencia del viento para realizar maniobras más radicales sobre las olas."
+          }
+        ]
+      }
+    ]
+  }
+  

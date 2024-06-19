@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/nicolaslorenzo/Desktop/UT5TFU/MyAplication/MiAplicacion.csproj": {}
+    "/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/MiAplicacion.csproj": {}
   },
   "projects": {
-    "/Users/nicolaslorenzo/Desktop/UT5TFU/MyAplication/MiAplicacion.csproj": {
+    "/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/MiAplicacion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nicolaslorenzo/Desktop/UT5TFU/MyAplication/MiAplicacion.csproj",
+        "projectUniqueName": "/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/MiAplicacion.csproj",
         "projectName": "MiAplicacion",
-        "projectPath": "/Users/nicolaslorenzo/Desktop/UT5TFU/MyAplication/MiAplicacion.csproj",
-        "packagesPath": "/Users/nicolaslorenzo/.nuget/packages/",
-        "outputPath": "/Users/nicolaslorenzo/Desktop/UT5TFU/MyAplication/obj/",
+        "projectPath": "/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/MiAplicacion.csproj",
+        "packagesPath": "/Users/francobarlocco/.nuget/packages/",
+        "outputPath": "/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/nicolaslorenzo/.nuget/NuGet/NuGet.Config"
+          "/Users/francobarlocco/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -42,6 +42,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
