@@ -7,8 +7,8 @@ namespace ProyectoUT5
         public int Experience { get; set; }
         public string Discipline { get; set; }
 
-        public Juez(int ci, string firstName, string lastName, int age, string genre, string country, string email, int experience, string discipline)
-            : base(ci, firstName, lastName, age, genre, country, email)
+        public Juez(int ci, string password, string firstName, string lastName, int age, string genre, string country, int experience, string discipline)
+            : base(ci, password, firstName, lastName, age, genre, country)
         {
             Experience = experience;
             Discipline = discipline;

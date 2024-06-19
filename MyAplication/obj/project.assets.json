@@ -55,19 +55,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/francobarlocco/.nuget/packages/": {}
+    "/Users/nicolaslorenzo/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/MiAplicacion.csproj",
+      "projectUniqueName": "/Users/nicolaslorenzo/Desktop/UT5TFU/MyAplication/MiAplicacion.csproj",
       "projectName": "MiAplicacion",
-      "projectPath": "/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/MiAplicacion.csproj",
-      "packagesPath": "/Users/francobarlocco/.nuget/packages/",
-      "outputPath": "/Users/francobarlocco/Documents/Workspace/ADA1/UT5TFU/UT5TFU/MyAplication/obj/",
+      "projectPath": "/Users/nicolaslorenzo/Desktop/UT5TFU/MyAplication/MiAplicacion.csproj",
+      "packagesPath": "/Users/nicolaslorenzo/.nuget/packages/",
+      "outputPath": "/Users/nicolaslorenzo/Desktop/UT5TFU/MyAplication/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/francobarlocco/.nuget/NuGet/NuGet.Config"
+        "/Users/nicolaslorenzo/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -120,5 +120,13 @@
         "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file /Users/nicolaslorenzo/Desktop/UT5TFU/MyAplication/obj/project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

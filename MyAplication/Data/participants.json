@@ -1,30 +1,20 @@
 [
-    {
-      "ci": 123456789,
-      "firstName": "Nombre1",
-      "lastName": "Apellido1",
-      "age": 30,
-      "genre": "Masculino",
-      "country": "Uruguay",
-      "email": "correo1@example.com"
-    },
-    {
-      "ci": 987654321,
-      "firstName": "Nombre2",
-      "lastName": "Apellido2",
-      "age": 35,
-      "genre": "Femenino",
-      "country": "Argentina",
-      "email": "correo2@example.com"
-    },
-    {
-      "ci": 555555555,
-      "firstName": "Nombre3",
-      "lastName": "Apellido3",
-      "age": 40,
-      "genre": "Masculino",
-      "country": "Chile",
-      "email": "correo3@example.com"
-    }
-  ]
-  
+  {
+    "Ci": 2222,
+    "Password": "1222",
+    "FirstName": "dddd",
+    "LastName": "sssss",
+    "Age": 222,
+    "Genre": "ssss",
+    "Country": "dddd"
+  },
+  {
+    "Ci": 4444,
+    "Password": "123",
+    "FirstName": "rffff",
+    "LastName": "dddd",
+    "Age": 333,
+    "Genre": "dfff",
+    "Country": "ggg"
+  }
+]

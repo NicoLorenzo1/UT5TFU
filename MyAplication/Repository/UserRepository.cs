@@ -1,55 +1,126 @@
 using System.Collections.Generic;
 using System.Linq;
+using Newtonsoft.Json;
 using ProyectoUT5;
 
 namespace ProyectoUT5.Repository
 {
     public class UserRepository
     {
-        private readonly List<Participant> participantsList = new List<Participant>();
+        private List<Participant> participantsList = new List<Participant>();
+        private List<Juez> juezList = new List<Juez>();
+        private string filePath;
+        private string juezFilePath;
+
 
         public UserRepository()
         {
-            // Carga la lista desde el archivo JSON al inicializar UserRepository
+            
             LoadParticipantsList();
-            Console.WriteLine("Cantidad de participantes cargados: " + participantsList.Count);
-            if (participantsList.Count > 0)
+            LoadJuezList();
+        }
+
+        private void LoadParticipantsList()
+        {
+            try
             {
-                Console.WriteLine("Primer participante: " + participantsList[0].FirstName + " " + participantsList[0].LastName);
+            filePath = "Data/participants.json";
+                string jsonContent = File.ReadAllText(filePath);
+                var participantsList = JsonConvert.DeserializeObject<List<Participant>>(jsonContent); //deserializa el json en una lista de participantes
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al leer el archivo JSON: {ex.Message}");
             }
         }
 
-private void LoadParticipantsList()
-{
-    try
-    {
-        Console.WriteLine("Intentando leer el archivo JSON...");
-        var participants = JsonFileHandler.ReadFromJsonFile<Participant>("UT5TFU/Data/participants.json");
-        
-        if (participants != null && participants.Any())
+        private void LoadJuezList()
         {
-            participantsList.AddRange(participants);
-            Console.WriteLine("Participantes cargados exitosamente:");
-            foreach (var participant in participantsList)
+            try
             {
-                //Console.WriteLine($"CI: {participant.CI}, Nombre: {participant.FirstName}, Apellido: {participant.LastName}");
+                juezFilePath = "Data/juezList.json";
+                string jsonContent = File.ReadAllText(juezFilePath);
+                juezList = JsonConvert.DeserializeObject<List<Juez>>(jsonContent); //deserializa el json en una lista de Jueces
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al leer el archivo JSON: {ex.Message}");
             }
         }
-        else
-        {
-            Console.WriteLine("No se encontraron participantes en el archivo JSON.");
-        }
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Error al leer el archivo JSON: {ex.Message}");
-    }
-}
 
+        public void RegisterParticipant(int ci, string password, string firstName, string lastName, int age, string genre, string country)
+        {
+            // Verificar si el participante ya existe
+            if (participantsList.Any(p => p.Ci == ci))
+            {
+                Console.WriteLine($"El participante con CI {ci} ya está registrado.");
+                return;
+            }
+
+            Participant participant = new Participant(ci, password, firstName, lastName, age, genre, country);
+            AddParticipant(participant);
+            Console.WriteLine("Participante registrado exitosamente.");
+        }
+
+        public bool LoginParticipant(int ci, string password)
+        {
+            Participant participant = participantsList.FirstOrDefault(p => p.Ci == ci);
+            if (participant != null && participant.Password == password)
+            {
+                Console.WriteLine("Inicio de sesión exitoso.");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("CI o contraseña incorrecta.");
+                return false;
+            }
+        }
+
+        public bool LoginJuez(int ci, string password)
+        {
+            Juez juez = juezList.FirstOrDefault(j => j.Ci == ci);
+
+            Console.WriteLine(juezList.Count);
+
+            if (juez != null && juez.Password == password)
+            {
+                Console.WriteLine("Inicio de sesión exitoso.");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("CI o contraseña incorrecta.");
+                return false;
+            }
+        }
         public void AddParticipant(Participant participant)
         {
+            filePath = "Data/participants.json";
+            
+            // Cargar la lista de participantes desde el archivo JSON si existe
+            if (File.Exists(filePath))
+            {
+                string json = File.ReadAllText(filePath);
+                participantsList = JsonConvert.DeserializeObject<List<Participant>>(json);
+            }
+
             participantsList.Add(participant);
-            JsonFileHandler.WriteToJsonFile("Data/participants.json", participantsList);
+
+            string updatedJson = JsonConvert.SerializeObject(participantsList, Formatting.Indented);
+            File.WriteAllText(filePath, updatedJson);
+        }
+
+        public void AddJuez(Juez juez)
+        {
+            juezFilePath = "Data/juezList.json";
+            juezList.Add(juez);
+            JsonFileHandler.WriteToJsonFile(filePath, juezList);
+        }
+
+            public bool IsJudge(int ci)
+        {
+            return juezList.Any(j => j.Ci == ci);
         }
 
         public Participant GetUserByUsername(string firstName)

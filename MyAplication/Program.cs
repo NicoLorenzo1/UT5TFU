@@ -7,8 +7,11 @@ namespace ProyectoUT5
     {
         static void Main(string[] args)
         {
-            ShowDisciplies showDisciplies = new ShowDisciplies();
-            showDisciplies.showDisciplies();
+            Console.WriteLine("Hola, Mundo!");
+            Menu menu = new Menu();
+            menu.ShowMenu();
+
         }
     }
+
 }
