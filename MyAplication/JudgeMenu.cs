@@ -27,7 +27,7 @@ namespace ProyectoUT5
                    ShowDisciplines();
                     break;
                 case 2:
-                    //this.access.LoginUser();
+                    updateScore();
                     break;
                 case 3:
                     Console.WriteLine("Gracias por usar el sistema. ¡Adiós!");
@@ -67,8 +67,8 @@ namespace ProyectoUT5
                             }
                             break;
                 case 2:
-                    //this.access.LoginUser();
-                    break;
+                        updateScore();
+                        break;
                 case 3:
                     Console.WriteLine("Gracias por usar el sistema. ¡Adiós!");
                     break;
@@ -77,6 +77,27 @@ namespace ProyectoUT5
                     break;
             }
 
-}
+        }   
+
+        public void updateScore(){
+                        Console.WriteLine("Ingrese el CI del participante:");
+                        if (int.TryParse(Console.ReadLine(), out int ci))
+                        {
+                            Console.WriteLine("Ingrese el nuevo puntaje:");
+                            if (int.TryParse(Console.ReadLine(), out int newScore))
+                            {
+                                TablePoints.Instance.UpdateScore(ci, newScore);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Puntaje inválido.");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("CI inválido.");
+                        }
+                        
+        }
     }
 }

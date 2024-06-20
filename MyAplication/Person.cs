@@ -2,7 +2,7 @@ using System;
 
 namespace ProyectoUT5
 {
-    public class Person 
+    public class Person
     {
         public int Ci { get; set; }
         public string Password { get; set; }
