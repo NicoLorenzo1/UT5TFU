@@ -37,7 +37,6 @@ namespace ProyectoUT5
             {
                 string json = JsonConvert.SerializeObject(data, Formatting.Indented);
                 File.WriteAllText(_filePath, json);
-                Console.WriteLine("Data saved successfully.");
             }
             catch (IOException)
             {
