@@ -1,4 +1,3 @@
-
 namespace ProyectoUT5
 {
     public static class ShowDisciplies

@@ -12,8 +12,5 @@ namespace ProyectoUT5
             Score = 0;
         }
 
-        public void insertPoints(int participantCi, int points){
-            //logica ingresar puntos del participante 
-        }
     }
 }

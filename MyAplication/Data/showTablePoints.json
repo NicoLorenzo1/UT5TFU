@@ -9,5 +9,33 @@
     "Genre": null,
     "Country": null,
     "Discipline": "atletismo"
-  }
+  },
+  {
+    "Ci": 4444,
+    "FirstName": "rffff",
+    "LastName": "dddd",
+    "Discipline": "Saltos",
+    "Score": 88
+},
+{
+    "Ci": 1234,
+    "FirstName": "franco",
+    "LastName": "barlocco",
+    "Discipline": "Lanzamientos",
+    "Score": 92
+},
+{
+    "Ci": 5555,
+    "FirstName": "Ana",
+    "LastName": "Lopez",
+    "Discipline": "Heptatlón",
+    "Score": 90
+},
+{
+    "Ci": 6666,
+    "FirstName": "Juan",
+    "LastName": "Perez",
+    "Discipline": "Decatlón",
+    "Score": 85
+}
 ]

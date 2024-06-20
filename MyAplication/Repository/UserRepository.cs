@@ -30,20 +30,21 @@ namespace ProyectoUT5.Repository
         {
             LoadJuezList();
             LoadParticipantsList();
-            Console.WriteLine("datos cargados ##### " + participantsList.Count);
         }
 
-        private void LoadParticipantsList()
+        public List<Participant> LoadParticipantsList()
         {
             try
             {
             filePath = "Data/participants.json";
                 string jsonContent = File.ReadAllText(filePath);
                 participantsList = JsonConvert.DeserializeObject<List<Participant>>(jsonContent); //deserializa el json en una lista de participantes
+                return participantsList;
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error al leer el archivo JSON: {ex.Message}");
+                return participantsList;
             }
         }
 

@@ -3,6 +3,7 @@ using ProyectoUT5.Repository;
 
 namespace ProyectoUT5
 {
+    //implementa la interfaz IUserMenu que tiene la firma del metodo ShowMenu()
     public class JudgeMenu : IUserMenu
     {
         public JudgeMenu()
@@ -25,11 +26,17 @@ namespace ProyectoUT5
             {
                  case 1:
                     ShowParticipants();
+                    ShowMenu();
                     break;
                 case 2:
                     UpdateScore();
+                    ShowMenu();
                     break;
                 case 3:
+                    AddParticipantToTeam();
+                    ShowMenu();
+                    break;
+                case 4:
                     Console.WriteLine("Gracias por usar el sistema. ¡Adiós!");
                     break;
                 default:
@@ -37,7 +44,6 @@ namespace ProyectoUT5
                     break;
             }
         }
-
 
         private void UpdateScore()
         {
@@ -85,6 +91,24 @@ namespace ProyectoUT5
             {
                 Console.WriteLine($"No se encontraron participantes de {discipline}.");
             }
+        }
+
+        public static void AddParticipantToTeam()
+        {
+            // Solicitar la cédula del participante
+            Console.WriteLine("Ingrese la cédula del participante:");
+            if (!int.TryParse(Console.ReadLine(), out int ci))
+            {
+                Console.WriteLine("Cédula inválida.");
+                return;
+            }
+
+            // Solicitar el nombre del equipo
+            Console.WriteLine("Ingrese el nombre del equipo:");
+            string equipo = Console.ReadLine();
+
+            TeamRepository.Instance.AddParticipant(ci, equipo);
+
         }
     }
 }

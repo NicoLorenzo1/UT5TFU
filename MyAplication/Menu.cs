@@ -3,6 +3,7 @@ using ProyectoUT5.Repository;
 
 namespace ProyectoUT5
 {
+    //implementa la interfaz IUserMenu que tiene la firma del metodo ShowMenu()
     public class Menu : IUserMenu
     {
         private Access access;
