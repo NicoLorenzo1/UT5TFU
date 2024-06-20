@@ -6,7 +6,8 @@
     "LastName": "sssss",
     "Age": 222,
     "Genre": "ssss",
-    "Country": "dddd"
+    "Country": "dddd",
+    "Discipline": "Carreras de Velocidad"
   },
   {
     "Ci": 4444,
@@ -15,6 +16,87 @@
     "LastName": "dddd",
     "Age": 333,
     "Genre": "dfff",
-    "Country": "ggg"
+    "Country": "ggg",
+    "Discipline": "Saltos"
+  },
+  {
+    "Ci": 1234,
+    "Password": "1234",
+    "FirstName": "franco",
+    "LastName": "barlocco",
+    "Age": 12,
+    "Genre": "undefined",
+    "Country": "uru",
+    "Discipline": "Lanzamientos"
+  },
+  {
+    "Ci": 5555,
+    "Password": "5555",
+    "FirstName": "Ana",
+    "LastName": "Lopez",
+    "Age": 25,
+    "Genre": "female",
+    "Country": "Arg",
+    "Discipline": "Heptatlón"
+  },
+  {
+    "Ci": 6666,
+    "Password": "6666",
+    "FirstName": "Juan",
+    "LastName": "Perez",
+    "Age": 30,
+    "Genre": "male",
+    "Country": "Mex",
+    "Discipline": "Decatlón"
+  },
+  {
+    "Ci": 7777,
+    "Password": "7777",
+    "FirstName": "Luis",
+    "LastName": "Martinez",
+    "Age": 20,
+    "Genre": "male",
+    "Country": "Chi",
+    "Discipline": "Natación Libre"
+  },
+  {
+    "Ci": 8888,
+    "Password": "8888",
+    "FirstName": "Maria",
+    "LastName": "Gonzalez",
+    "Age": 22,
+    "Genre": "female",
+    "Country": "Col",
+    "Discipline": "Gimnasia"
+  },
+  {
+    "Ci": 9999,
+    "Password": "9999",
+    "FirstName": "Carlos",
+    "LastName": "Hernandez",
+    "Age": 28,
+    "Genre": "male",
+    "Country": "Per",
+    "Discipline": "Clavados"
+  },
+  {
+    "Ci": 1010,
+    "Password": "1010",
+    "FirstName": "Luisa",
+    "LastName": "Fernandez",
+    "Age": 27,
+    "Genre": "female",
+    "Country": "Ecu",
+    "Discipline": "Halterofilia"
+  },
+  {
+    "Ci": 1111,
+    "Password": "1111",
+    "FirstName": "Jose",
+    "LastName": "Ramirez",
+    "Age": 19,
+    "Genre": "male",
+    "Country": "Bol",
+    "Discipline": "Esgrima"
   }
 ]

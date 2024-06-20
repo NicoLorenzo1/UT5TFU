@@ -2,7 +2,7 @@ using System;
 
 namespace ProyectoUT5
 {
-    public class Person 
+    public class Person
     {
         public int Ci { get; set; }
         public string Password { get; set; }
@@ -11,7 +11,9 @@ namespace ProyectoUT5
         public int Age { get; set; }
         public string Genre { get; set; }
         public string Country { get; set; }
-        
+        public string Discipline { get; set; }
+        public string Score { get; set; }
+
         public Person(int ci, string password, string firstName, string lastName, int age, string genre, string country)
         {
             Ci = ci;

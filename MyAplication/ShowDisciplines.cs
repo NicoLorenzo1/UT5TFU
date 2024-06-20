@@ -8,7 +8,7 @@ namespace ProyectoUT5
 
         }
 
-        public void showDisciplies()
+        public static void showDisciplies()
         {
             var repository = new DisciplineRepository();
             List<Discipline> disciplines = repository.GetDisciplines() ?? new List<Discipline>();
