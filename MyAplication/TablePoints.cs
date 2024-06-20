@@ -1,8 +1,11 @@
+using ProyectoUT5.Repository;
+
 namespace ProyectoUT5
 {
     public class TablePoints
     {
-        private readonly ShowTablePointsRepository _repository;
+        private readonly string _filePath;
+        private readonly TablePointsRepository _repository;
          private static TablePoints instance;
 
         public static TablePoints Instance
@@ -19,7 +22,7 @@ namespace ProyectoUT5
         }
         public TablePoints()
         {
-            _repository = ShowTablePointsRepository.Instance;
+            _repository = TablePointsRepository.Instance;
         }
 
         public Dictionary<string, List<Participant>> GetPointsByDiscipline()
@@ -39,6 +42,22 @@ namespace ProyectoUT5
             return disciplinePoints;
         }
 
+        public Dictionary<string, List<Team>> GetTeamPointsByDiscipline()
+        {
+            List<Team> data = TeamRepository.Instance.GetData();
+            Dictionary<string, List<Team>> disciplinePoints = new Dictionary<string, List<Team>>();
+
+            foreach (var team in data)
+            {
+                if (!disciplinePoints.ContainsKey(team.Discipline))
+                {
+                    disciplinePoints[team.Discipline] = new List<Team>();
+                }
+                disciplinePoints[team.Discipline].Add(team);
+            }
+            return disciplinePoints;
+        }
+
 
         public void DisplayPointsTable()
         {
@@ -55,6 +74,22 @@ namespace ProyectoUT5
                 }
                 Console.WriteLine();
             }
+        }
+            public void DisplayTeamPointsTable()
+        {
+            Dictionary<string, List<Team>> pointsByDiscipline = GetTeamPointsByDiscipline();
+
+            foreach (var discipline in pointsByDiscipline)
+            {
+               Console.WriteLine($"Disciplina: {discipline.Key}");
+                Console.WriteLine($"{"Equipo",-20} {"Puntaje",-10}"); 
+                Console.WriteLine(new string('-', 30)); 
+                foreach (var team in discipline.Value)
+                {
+                    Console.WriteLine($"{team.TeamName,-20} {team.Score,-10}"); 
+                }
+                Console.WriteLine();
+                    }
         }
 
         public void UpdateScore(int ci, int score)

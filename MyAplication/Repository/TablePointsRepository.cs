@@ -2,27 +2,27 @@ using Newtonsoft.Json;
 
 namespace ProyectoUT5
 {
-    public class ShowTablePointsRepository
+    public class TablePointsRepository
     {
         private readonly string _filePath;
 
 
-        private static ShowTablePointsRepository instance;
+        private static TablePointsRepository instance;
 
         //Singleton instancia unica
-        public static ShowTablePointsRepository Instance
+        public static TablePointsRepository Instance
         {
             get
             {
                 if (instance == null)
                 {
-                    instance = new ShowTablePointsRepository();
+                    instance = new TablePointsRepository();
                 }
 
                 return instance;
             }
         }
-        public ShowTablePointsRepository()
+        public TablePointsRepository()
         {
             _filePath = "Data/showTablePoints.json";
         }

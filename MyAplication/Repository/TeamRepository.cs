@@ -30,6 +30,7 @@ namespace ProyectoUT5.Repository
         {
             this.participantsList = UserRepository.Instance.LoadParticipantsList();
             LoadTeamList();
+
         }
 
         private void LoadTeamList()
@@ -61,6 +62,27 @@ namespace ProyectoUT5.Repository
 
             JsonFileHandler.WriteToJsonFile("Data/team.json", TeamList);
             Console.WriteLine("Participante agregado al equipo con éxito.");
+        }
+
+            public List<Team> GetData()
+        {
+            try
+            {
+                filePath = "Data/team.json";
+                string json = File.ReadAllText(filePath);
+                List<Team> Teams = JsonConvert.DeserializeObject<List<Team>>(json);
+                return Teams;
+            }
+            catch (FileNotFoundException)
+            {
+                Console.WriteLine($"File {filePath} not found.");
+                return new List<Team>();
+            }
+            catch (JsonException)
+            {
+                Console.WriteLine($"Error decoding JSON from file {filePath}.");
+                return new List<Team>();
+            }
         }
 
     }
