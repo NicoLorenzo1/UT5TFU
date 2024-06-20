@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
 using ProyectoUT5;
+using ProyectoUT5.Handler;
+
 
 namespace ProyectoUT5.Repository
 {
@@ -30,7 +32,6 @@ namespace ProyectoUT5.Repository
         {
             this.participantsList = UserRepository.Instance.LoadParticipantsList();
             LoadTeamList();
-
         }
 
         private void LoadTeamList()
@@ -60,7 +61,7 @@ namespace ProyectoUT5.Repository
             }
             team.Participants.Add(participant);
 
-            JsonFileHandler.WriteToJsonFile("Data/team.json", TeamList);
+            JsonFileService.WriteToJsonFile("Data/team.json", TeamList);
             Console.WriteLine("Participante agregado al equipo con éxito.");
         }
 
@@ -70,7 +71,7 @@ namespace ProyectoUT5.Repository
             {
                 filePath = "Data/team.json";
                 string json = File.ReadAllText(filePath);
-                List<Team> Teams = JsonConvert.DeserializeObject<List<Team>>(json);
+                List<Team> Teams = JsonFileService.ReadFromJsonFile<List<Team>>(filePath);
                 return Teams;
             }
             catch (FileNotFoundException)

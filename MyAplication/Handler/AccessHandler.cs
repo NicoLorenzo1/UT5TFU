@@ -1,12 +1,25 @@
 using System;
 using ProyectoUT5.Repository;
 
-namespace ProyectoUT5
+namespace ProyectoUT5.Handler
 {
-    public class Access
+    public class AccessHandler
     {
         private IUserMenu userMenu;
-        public Access(){
+        private static AccessHandler instance;
+
+        //Implementa singleton 
+        public static AccessHandler Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new AccessHandler();
+                }
+
+                return instance;
+            }
         }
 
             public void RegisterUser()
@@ -46,7 +59,8 @@ namespace ProyectoUT5
             string discipline = Console.ReadLine();
 
             UserRepository.Instance.Register(ci, password, firstName, lastName, age, genre, country, discipline);
-            Console.WriteLine("¡Registro exitoso!");
+            
+            userMenu = new ParticipantMenuHandler();    // participante inicializo menu de participante.
         }
 
         public void LoginUser()
@@ -68,11 +82,11 @@ namespace ProyectoUT5
             if (loginSuccess && isJudge)
             {
                 Console.WriteLine("¡Bienvenido Juez!");
-                userMenu = new JudgeMenu();     //si es juez inicializo menu de juez
+                userMenu = new JudgeMenuHandler();     //si es juez inicializo menu de juez
             }
             else if(loginSuccess){
                 Console.WriteLine("¡Bienvenido Participante!");
-                userMenu = new ParticipantMenu();    //si es participante inicializo menu de participante.
+                userMenu = new ParticipantMenuHandler();    //si es participante inicializo menu de participante.
             }
             else
             {

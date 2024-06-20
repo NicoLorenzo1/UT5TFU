@@ -1,57 +1,24 @@
 [
   {
-    "Score": 150,
+    "Score": 2,
     "Ci": 54332615,
-    "Password": null,
+    "Password": "1234567",
     "FirstName": "nicolas",
     "LastName": "lorenzo",
-    "Age": 0,
-    "Genre": null,
-    "Country": null,
+    "Age": 22,
+    "Genre": "hombre",
+    "Country": "uruguay",
     "Discipline": "atletismo"
   },
   {
-    "Score": 100,
-    "Ci": 4444,
-    "Password": null,
-    "FirstName": "rffff",
-    "LastName": "dddd",
-    "Age": 0,
-    "Genre": null,
-    "Country": null,
-    "Discipline": "Saltos"
-  },
-  {
-    "Score": 92,
-    "Ci": 1234,
-    "Password": null,
-    "FirstName": "franco",
-    "LastName": "barlocco",
-    "Age": 0,
-    "Genre": null,
-    "Country": null,
-    "Discipline": "Lanzamientos"
-  },
-  {
-    "Score": 90,
-    "Ci": 5555,
-    "Password": null,
-    "FirstName": "Ana",
-    "LastName": "Lopez",
-    "Age": 0,
-    "Genre": null,
-    "Country": null,
-    "Discipline": "Heptatlón"
-  },
-  {
-    "Score": 85,
-    "Ci": 6666,
-    "Password": null,
-    "FirstName": "Juan",
-    "LastName": "Perez",
-    "Age": 0,
-    "Genre": null,
-    "Country": null,
-    "Discipline": "Decatlón"
+    "Score": 0,
+    "Ci": 5,
+    "Password": "1",
+    "FirstName": "n",
+    "LastName": "l",
+    "Age": 2,
+    "Genre": "h",
+    "Country": "u",
+    "Discipline": "a"
   }
 ]
