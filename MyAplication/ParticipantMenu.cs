@@ -12,7 +12,7 @@ namespace ProyectoUT5
 
         public void ShowMenu()
         {
-            Console.WriteLine("Elige una opción \n 1- Ver disciplinas \n 2- Ver tabla de puntuación \n 3- Salir");
+            Console.WriteLine("Elige una opción \n 1- Ver disciplinas \n 2- Ver tabla de puntuación de participantes \n 3- Ver tabla de puntuación de equipos \n 4- Salir");
 
             int option;
             if (!int.TryParse(Console.ReadLine(), out option))
@@ -32,6 +32,10 @@ namespace ProyectoUT5
                     ShowMenu();
                     break;
                 case 3:
+                    TablePoints.Instance.DisplayTeamPointsTable();
+                    ShowMenu();
+                    break;
+                case 4:
                     Console.WriteLine("Gracias por usar el sistema. ¡Adiós!");
                     break;
                 default:

@@ -5,5 +5,6 @@ namespace ProyectoUT5
         public string TeamName { get; set; }
         public string Discipline { get; set; }
         public List<Participant> Participants { get; set; }
+        public int Score { get; set; }
     }
 }
