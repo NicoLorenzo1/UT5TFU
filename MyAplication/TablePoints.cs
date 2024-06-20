@@ -1,12 +1,25 @@
 namespace ProyectoUT5
 {
-    public class ShowTablePoints
+    public class TablePoints
     {
         private readonly ShowTablePointsRepository _repository;
+         private static TablePoints instance;
 
-        public ShowTablePoints(ShowTablePointsRepository repository)
+        public static TablePoints Instance
         {
-            _repository = repository;
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new TablePoints();
+                }
+
+                return instance;
+            }
+        }
+        public TablePoints()
+        {
+            _repository = ShowTablePointsRepository.Instance;
         }
 
         public Dictionary<string, List<Participant>> GetPointsByDiscipline()
@@ -26,6 +39,7 @@ namespace ProyectoUT5
             return disciplinePoints;
         }
 
+
         public void DisplayPointsTable()
         {
             Dictionary<string, List<Participant>> pointsByDiscipline = GetPointsByDiscipline();
@@ -40,6 +54,24 @@ namespace ProyectoUT5
                     Console.WriteLine($"{participant.FirstName} {participant.LastName,-30} {participant.Score,-5}");
                 }
                 Console.WriteLine();
+            }
+        }
+
+        public void UpdateScore(int ci, int score)
+        {
+            // Buscar al participante por CI
+            List<Participant> data = _repository.GetData();
+            Participant participant = data.FirstOrDefault(p => p.Ci == ci);
+
+            if (participant != null)
+            {
+                participant.Score = score;
+                _repository.SaveData(data);
+                Console.WriteLine($"Puntaje actualizado para {participant.FirstName} {participant.LastName}. Nuevo puntaje: {score}");
+            }
+            else
+            {
+                Console.WriteLine($"No se encontró al participante con CI {ci}.");
             }
         }
     }

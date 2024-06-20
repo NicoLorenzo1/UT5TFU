@@ -12,9 +12,8 @@ namespace ProyectoUT5
         public string Genre { get; set; }
         public string Country { get; set; }
         public string Discipline { get; set; }
-        public string Score { get; set; }
-
-        public Person(int ci, string password, string firstName, string lastName, int age, string genre, string country)
+        
+        public Person(int ci, string password, string firstName, string lastName, int age, string genre, string country, string discipline)
         {
             Ci = ci;
             Password = password;
@@ -23,6 +22,7 @@ namespace ProyectoUT5
             Age = age;
             Genre = genre;
             Country = country;
+            Discipline = discipline;
         }
     }
 }

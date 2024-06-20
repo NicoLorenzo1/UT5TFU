@@ -10,6 +10,22 @@ namespace ProyectoUT5
         private List<Discipline>? disciplines;
         private readonly string? filePath;
 
+        private static DisciplineRepository instance;
+
+        //Singleton instancia unica
+        public static DisciplineRepository Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new DisciplineRepository();
+                }
+
+                return instance;
+            }
+        }
+
         public DisciplineRepository()
         {
             filePath = "Data/Disciplines.json";

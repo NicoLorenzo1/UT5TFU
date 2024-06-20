@@ -6,6 +6,22 @@ namespace ProyectoUT5
     {
         private readonly string _filePath;
 
+
+        private static ShowTablePointsRepository instance;
+
+        //Singleton instancia unica
+        public static ShowTablePointsRepository Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new ShowTablePointsRepository();
+                }
+
+                return instance;
+            }
+        }
         public ShowTablePointsRepository()
         {
             _filePath = "Data/showTablePoints.json";
@@ -28,6 +44,19 @@ namespace ProyectoUT5
             {
                 Console.WriteLine($"Error decoding JSON from file {_filePath}.");
                 return new List<Participant>();
+            }
+        }
+
+           public void SaveData(List<Participant> data)
+        {
+            try
+            {
+                string json = JsonConvert.SerializeObject(data, Formatting.Indented);
+                File.WriteAllText(_filePath, json);
+            }
+            catch (IOException)
+            {
+                Console.WriteLine($"Error writing data to file {_filePath}.");
             }
         }
     }

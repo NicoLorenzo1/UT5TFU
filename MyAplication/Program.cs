@@ -9,10 +9,8 @@ namespace ProyectoUT5
         {
             Console.WriteLine("Hola, Mundo!");
             Menu menu = new Menu();
-            //menu.ShowMenu();
-            ShowTablePointsRepository repository = new ShowTablePointsRepository();
-            ShowTablePoints showPoints = new ShowTablePoints(repository);
-            showPoints.DisplayPointsTable();
+            menu.ShowMenu();
+
 
         }
     }
