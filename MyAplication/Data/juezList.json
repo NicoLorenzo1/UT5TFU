@@ -6,10 +6,9 @@
       "age": 30,
       "genre": "Masculino",
       "country": "Uruguay",
-      "email": "correo1@example.com",
       "experience": 5,
       "Password": "111",
-      "discipline": "Fútbol"
+      "Discipline": "Fútbol"
     }
 ]
   

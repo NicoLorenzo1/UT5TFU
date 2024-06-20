@@ -3,17 +3,18 @@ using ProyectoUT5.Repository;
 
 namespace ProyectoUT5
 {
-    public class Menu
+    public class Menu : IUserMenu
     {
-        private UserRepository userRepository;
+        private Access access;
 
         public Menu(){
-            userRepository = new UserRepository();
+            this.access = new Access();
         }
 
          public void ShowMenu()
         {
-            Console.WriteLine("Elige una opción \n 1- /Registrarse \n 2- /Iniciar sesion \n 3- /Salir");
+            
+            Console.WriteLine("Elige una opción \n 1- Registrarse \n 2- Iniciar sesion \n 3- Salir");
 
             int option;
             if (!int.TryParse(Console.ReadLine(), out option))
@@ -25,10 +26,10 @@ namespace ProyectoUT5
             switch (option)
             {
                 case 1:
-                    RegisterUser();
+                    this.access.RegisterUser();
                     break;
                 case 2:
-                    LoginUser();
+                    this.access.LoginUser();
                     break;
                 case 3:
                     Console.WriteLine("Gracias por usar el sistema. ¡Adiós!");
@@ -39,74 +40,6 @@ namespace ProyectoUT5
             }
         }
 
-            private void RegisterUser()
-        {
-            Console.WriteLine("Registro de nuevo participante:");
-            
-            Console.Write("CI: ");
-            int ci;
-            while (!int.TryParse(Console.ReadLine(), out ci))
-            {
-                Console.WriteLine("CI debe ser un número. Inténtalo de nuevo:");
-            }
-
-            Console.Write("Nombre: ");
-            string firstName = Console.ReadLine();
-
-            Console.Write("Apellido: ");
-            string lastName = Console.ReadLine();
-
-            Console.Write("Edad: ");
-            int age;
-            while (!int.TryParse(Console.ReadLine(), out age))
-            {
-                Console.WriteLine("La edad debe ser un número entero. Inténtalo de nuevo:");
-            }
-
-            Console.Write("Género: ");
-            string genre = Console.ReadLine();
-
-            Console.Write("País: ");
-            string country = Console.ReadLine();
-
-            Console.Write("Contraseña: ");
-            string password = Console.ReadLine();
-
-            this.userRepository.RegisterParticipant(ci, password, firstName, lastName, age, genre, country);
-            Console.WriteLine("¡Registro exitoso!");
-        }
-
-        private void LoginUser()
-        {
-            Console.WriteLine("Inicio de sesión:");
-            
-            Console.Write("CI: ");
-            int ci;
-            while (!int.TryParse(Console.ReadLine(), out ci))
-            {
-                Console.WriteLine("CI debe ser un número. Inténtalo de nuevo:");
-            }
-
-            Console.Write("Contraseña: ");
-            string password = Console.ReadLine();
-
-            bool loginSuccess = this.userRepository.LoginParticipant(ci, password) || this.userRepository.LoginJuez(ci, password);
-            bool isJudge = userRepository.IsJudge(ci);
-            if (loginSuccess && isJudge)
-            {
-                Console.WriteLine("¡Bienvenido Juez!");
-               // JudgeInterface();
-            }
-            else if(loginSuccess){
-                Console.WriteLine("¡Bienvenido Participante!");
-               // ParticipantInterface();
-            }
-            else
-            {
-                Console.WriteLine("Inicio de sesión fallido. Verifica tus datos.");
-            }
-
-
-        }
-        }
-    }
+     }
+}
+    
