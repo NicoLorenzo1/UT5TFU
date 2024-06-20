@@ -1,5 +1,7 @@
 ﻿using System;
 using ProyectoUT5.Repository;
+using ProyectoUT5.Handler;
+
 
 namespace ProyectoUT5
 {
@@ -8,7 +10,7 @@ namespace ProyectoUT5
         static void Main(string[] args)
         {
             Console.WriteLine("Hola, Mundo!");
-            Menu menu = new Menu();
+            MenuHandler menu = new MenuHandler();
             menu.ShowMenu();
 
 

@@ -1,9 +1,7 @@
 namespace ProyectoUT5
 {
-    public static class ShowDisciplies
+    public static class DisciplinesHandler
     {
-
-
         public static void showDisciplies()
         {
             var repository = DisciplineRepository.Instance;

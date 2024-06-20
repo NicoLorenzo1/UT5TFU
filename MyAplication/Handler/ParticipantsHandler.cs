@@ -11,7 +11,7 @@ namespace ProyectoUT5
             Console.WriteLine("Ingrese el nombre de una disciplina: \nAtletismo \nNatacion \nGimnasia \nClavados \nHalterofilia \nEsgrima \nSurf \nKitesurf");
             string discipline = Console.ReadLine();
 
-            List<Participant> participants = GetParticipantsByDiscipline(discipline);
+            List<Participant> participants = ParticipantRepository.Instance.GetParticipantsByDiscipline(discipline);
             if (participants.Count > 0)
             {
                 Console.WriteLine($"Lista de participantes de {discipline}:");
@@ -26,7 +26,7 @@ namespace ProyectoUT5
             }
         }
 
-        public static void AddParticipantToTeam()
+        public static void AddParticipantToTeamMenu()
         {
             // Solicitar la cédula del participante
             Console.WriteLine("Ingrese la cédula del participante:");
@@ -42,15 +42,6 @@ namespace ProyectoUT5
 
             TeamRepository.Instance.AddParticipant(ci, equipo);
 
-        }
-
-        public static List<Participant> GetParticipantsByDiscipline(string discipline)
-        {
-            var matchingParticipants = UserRepository.Instance.LoadParticipantsList()
-                .Where(p => p.Discipline.Equals(discipline, StringComparison.OrdinalIgnoreCase))
-                .ToList();
-            
-            return matchingParticipants;
         }
     }
 }

@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
 using ProyectoUT5;
+using ProyectoUT5.Handler;
+
 
 namespace ProyectoUT5.Repository
 {
@@ -38,8 +40,7 @@ namespace ProyectoUT5.Repository
             try
             {
             filePath = "Data/participants.json";
-                string jsonContent = File.ReadAllText(filePath);
-                participantsList = JsonConvert.DeserializeObject<List<Participant>>(jsonContent); //deserializa el json en una lista de participantes
+                participantsList = JsonFileService.ReadFromJsonFile<List<Participant>>(filePath); //deserializa el json en una lista de participantes
                 return participantsList;
             }
             catch (Exception ex)
@@ -55,7 +56,7 @@ namespace ProyectoUT5.Repository
             {
                 juezFilePath = "Data/juezList.json";
                 string jsonContent = File.ReadAllText(juezFilePath);
-                juezList = JsonConvert.DeserializeObject<List<Juez>>(jsonContent); //deserializa el json en una lista de Jueces
+                juezList = JsonFileService.ReadFromJsonFile<List<Juez>>(juezFilePath); //deserializa el json en una lista de Jueces
             }
             catch (Exception ex)
             {
@@ -74,8 +75,9 @@ namespace ProyectoUT5.Repository
 
             Participant participant = new Participant(ci, password, firstName, lastName, age, genre, country, discipline);
             this.participantsList.Add(participant);
-            string updatedJson = JsonConvert.SerializeObject(participantsList, Formatting.Indented);
-            File.WriteAllText(filePath, updatedJson);
+
+            JsonFileService.WriteToJsonFile("Data/participants.json", participantsList);
+
             Console.WriteLine("Participante registrado exitosamente.");
         }
 
@@ -110,6 +112,7 @@ namespace ProyectoUT5.Repository
         {
             return juezList.Any(j => j.Ci == ci);
         }
+
 
     }
 }

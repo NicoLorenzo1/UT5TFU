@@ -2,20 +2,8 @@
     {
       "TeamName": "Equipo1",
       "Discipline": "Natacion",
-      "Participants": [
-        {
-          "Score": 1,
-          "Ci": 54332615,
-          "Password": "1234567",
-          "FirstName": "nicolas",
-          "LastName": "lorenzo",
-          "Age": 22,
-          "Genre": "hombre",
-          "Country": "uruguay",
-          "Discipline": "atletismo"
-        }
-      ],
-      "Score": 10
+      "Participants": [],
+      "Score": 100
   
     },
     {

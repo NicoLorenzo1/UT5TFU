@@ -1,21 +1,18 @@
 using System;
-using ProyectoUT5.Repository;
 
-namespace ProyectoUT5
+namespace ProyectoUT5.Handler
 {
     //implementa la interfaz IUserMenu que tiene la firma del metodo ShowMenu()
-    public class Menu : IUserMenu
+    public class ParticipantMenuHandler : IUserMenu
     {
-        private Access access;
 
-        public Menu(){
-            this.access = new Access();
-        }
+        public ParticipantMenuHandler(){
+            ShowMenu();
+        }  
 
-         public void ShowMenu()
+        public void ShowMenu()
         {
-            
-            Console.WriteLine("Elige una opción \n 1- Registrarse \n 2- Iniciar sesion \n 3- Salir");
+            Console.WriteLine("Elige una opción \n 1- Ver disciplinas \n 2- Ver tabla de puntuación de participantes \n 3- Ver tabla de puntuación de equipos \n 4- Salir");
 
             int option;
             if (!int.TryParse(Console.ReadLine(), out option))
@@ -26,21 +23,26 @@ namespace ProyectoUT5
 
             switch (option)
             {
-                case 1:
-                    this.access.RegisterUser();
+                 case 1:
+                    DisciplinesHandler.showDisciplies();
+                    ShowMenu();
                     break;
                 case 2:
-                    this.access.LoginUser();
+                    TableHandler.DisplayPointsTable();
+                    ShowMenu();
                     break;
                 case 3:
+                    TableHandler.DisplayTeamPointsTable();
+                    ShowMenu();
+                    break;
+                case 4:
                     Console.WriteLine("Gracias por usar el sistema. ¡Adiós!");
                     break;
                 default:
                     Console.WriteLine("Opción no válida. Inténtalo de nuevo.");
                     break;
             }
-        }
 
-     }
+        }
+    }
 }
-    

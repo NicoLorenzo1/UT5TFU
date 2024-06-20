@@ -1,5 +1,6 @@
 [
   {
+    "Score": 0,
     "Ci": 54332615,
     "Password": "1234567",
     "FirstName": "nicolas",
@@ -8,5 +9,16 @@
     "Genre": "hombre",
     "Country": "uruguay",
     "Discipline": "atletismo"
+  },
+  {
+    "Score": 0,
+    "Ci": 5,
+    "Password": "1",
+    "FirstName": "n",
+    "LastName": "l",
+    "Age": 2,
+    "Genre": "h",
+    "Country": "u",
+    "Discipline": "a"
   }
 ]
