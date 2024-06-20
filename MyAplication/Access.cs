@@ -45,7 +45,7 @@ namespace ProyectoUT5
             Console.Write("Disciplina: ");
             string discipline = Console.ReadLine();
 
-            UserRepository.Instance.AddParticipant(ci, password, firstName, lastName, age, genre, country, discipline);
+            UserRepository.Instance.Register(ci, password, firstName, lastName, age, genre, country, discipline);
             Console.WriteLine("¡Registro exitoso!");
         }
 
@@ -63,7 +63,7 @@ namespace ProyectoUT5
             Console.Write("Contraseña: ");
             string password = Console.ReadLine();
 
-            bool loginSuccess = UserRepository.Instance.verifyCredentials(ci, password) || UserRepository.Instance.LoginJuez(ci, password);
+            bool loginSuccess = UserRepository.Instance.Login(ci, password) || UserRepository.Instance.LoginJuez(ci, password);
             bool isJudge = UserRepository.Instance.IsJudge(ci);
             if (loginSuccess && isJudge)
             {

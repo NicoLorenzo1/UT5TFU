@@ -12,6 +12,7 @@ namespace ProyectoUT5.Repository
         private string filePath;
         private static TeamRepository instance;
 
+        //Singleton instancia unica
         public static TeamRepository Instance
         {
             get

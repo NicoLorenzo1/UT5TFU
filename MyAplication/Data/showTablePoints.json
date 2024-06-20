@@ -1,6 +1,6 @@
 [
   {
-    "Score": 1,
+    "Score": 150,
     "Ci": 54332615,
     "Password": null,
     "FirstName": "nicolas",
@@ -11,31 +11,47 @@
     "Discipline": "atletismo"
   },
   {
+    "Score": 100,
     "Ci": 4444,
+    "Password": null,
     "FirstName": "rffff",
     "LastName": "dddd",
-    "Discipline": "Saltos",
-    "Score": 88
-},
-{
+    "Age": 0,
+    "Genre": null,
+    "Country": null,
+    "Discipline": "Saltos"
+  },
+  {
+    "Score": 92,
     "Ci": 1234,
+    "Password": null,
     "FirstName": "franco",
     "LastName": "barlocco",
-    "Discipline": "Lanzamientos",
-    "Score": 92
-},
-{
+    "Age": 0,
+    "Genre": null,
+    "Country": null,
+    "Discipline": "Lanzamientos"
+  },
+  {
+    "Score": 90,
     "Ci": 5555,
+    "Password": null,
     "FirstName": "Ana",
     "LastName": "Lopez",
-    "Discipline": "Heptatlón",
-    "Score": 90
-},
-{
+    "Age": 0,
+    "Genre": null,
+    "Country": null,
+    "Discipline": "Heptatlón"
+  },
+  {
+    "Score": 85,
     "Ci": 6666,
+    "Password": null,
     "FirstName": "Juan",
     "LastName": "Perez",
-    "Discipline": "Decatlón",
-    "Score": 85
-}
+    "Age": 0,
+    "Genre": null,
+    "Country": null,
+    "Discipline": "Decatlón"
+  }
 ]

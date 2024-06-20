@@ -38,6 +38,7 @@ namespace ProyectoUT5
                     Console.WriteLine("Opción no válida. Inténtalo de nuevo.");
                     break;
             }
+
         }
     }
 }

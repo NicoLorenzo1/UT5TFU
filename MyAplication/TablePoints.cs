@@ -19,7 +19,7 @@ namespace ProyectoUT5
         }
         public TablePoints()
         {
-            _repository = new ShowTablePointsRepository();
+            _repository = ShowTablePointsRepository.Instance;
         }
 
         public Dictionary<string, List<Participant>> GetPointsByDiscipline()

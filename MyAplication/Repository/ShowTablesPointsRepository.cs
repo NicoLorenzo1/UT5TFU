@@ -6,6 +6,22 @@ namespace ProyectoUT5
     {
         private readonly string _filePath;
 
+
+        private static ShowTablePointsRepository instance;
+
+        //Singleton instancia unica
+        public static ShowTablePointsRepository Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new ShowTablePointsRepository();
+                }
+
+                return instance;
+            }
+        }
         public ShowTablePointsRepository()
         {
             _filePath = "Data/showTablePoints.json";

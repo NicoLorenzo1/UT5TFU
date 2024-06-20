@@ -13,6 +13,7 @@ namespace ProyectoUT5.Repository
         private string juezFilePath;
         private static UserRepository instance;
 
+        //Singleton instancia unica
         public static UserRepository Instance
         {
             get
@@ -62,7 +63,7 @@ namespace ProyectoUT5.Repository
             }
         }
 
-        public void AddParticipant(int ci, string password, string firstName, string lastName, int age, string genre, string country, string discipline)
+        public void Register(int ci, string password, string firstName, string lastName, int age, string genre, string country, string discipline)
         {
             // Verificar si el participante ya existe
             if (participantsList.Any(p => p.Ci == ci))
@@ -78,7 +79,7 @@ namespace ProyectoUT5.Repository
             Console.WriteLine("Participante registrado exitosamente.");
         }
 
-        public bool verifyCredentials(int ci, string password)
+        public bool Login(int ci, string password)
         {
             Participant participant = participantsList.FirstOrDefault(p => p.Ci == ci);
             if (participant != null && participant.Password == password)
@@ -110,18 +111,5 @@ namespace ProyectoUT5.Repository
             return juezList.Any(j => j.Ci == ci);
         }
 
-        public Participant GetUserByCi(int ci)
-        {
-            return participantsList.FirstOrDefault(u => u.Ci == ci);
-        }
-
-        public List<Participant> GetParticipantsByDiscipline(string discipline)
-        {
-            var matchingParticipants = participantsList
-                .Where(p => p.Discipline.Equals(discipline, StringComparison.OrdinalIgnoreCase))
-                .ToList();
-            
-            return matchingParticipants;
-        }
     }
 }
